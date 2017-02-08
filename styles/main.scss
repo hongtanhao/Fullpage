@@ -1,0 +1,420 @@
+$btnwidth: 20px;
+$btnheight:20px;
+$btnbgcolor:transparent;
+$btnbordercolor:#fff;
+$btnmargin:40px;
+$verticalLineHeight:300px;
+$verticalLineWidth:2px;
+$verticalLinebgcolor:#fff;
+$buttongroupsWidth:100px;
+$buttongroupsHeight:200px;
+$buttongroupsbgcolor:yellow;
+$activebgcolor:#fff;
+@keyframes statement{
+  0%{
+     opacity: 0;
+     transform: translate3d(-200px,-200px,0);
+     background-color:red;
+     //transform: rotateZ(90deg);
+     }
+  100%{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+    //background-color:#000;
+    //transform: rotateZ(90deg);
+   }
+  } 
+ @keyframes arrow{
+  100%{border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+    }
+  0%{border-bottom: 1px solid blue;
+      border-left: 1px solid blue;}
+ }
+ @keyframes updown{
+  0%{}
+  100%{transform:translate3d(0,40px,0);
+       background-color:#fff;}
+ }   
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  //position:relative;
+}
+.header{
+  position: absolute;
+  height: 160px;
+  width: 100%;
+  background-color:rgba(0,0,0,.7);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+
+}
+.container{
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top:0;
+}
+.section{
+  height: 25%;
+  width: 100%;
+  position:relative;
+}
+.section1{
+  background-color: red;
+  background-image:url('../images/3.jpg');
+  
+}
+.nav{
+   position:absolute;
+   top: 49px;
+   right: 149px;
+  ul{
+    
+    li{
+      list-style-type:none;
+      height: 60px;
+      width:60px;
+      border:1px solid #fff;
+      border-radius:50%;
+      float: right;
+      margin-right:20px;
+      color: #fff;
+      font-size: 2.4rem;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      &:hover{
+      background:#fff;
+      color: #000;
+    }
+     &:last-child{
+      &:hover{
+        .doubcode{
+          display: block;
+        }
+      }
+     }
+    }
+
+  }
+}
+.doubcode{
+  position: absolute;
+  display: none;
+  top: 160px;
+  right: 140px;
+  padding:20px;
+  border:1px solid #fff;
+  background:rgba(0,0,0,.3);
+  box-shadow:4px 4px 4px rgba(0,0,0,.4);
+  p{
+    color: #fff;
+    font-size: 1rem;
+  }
+}
+.mask{
+  height: 100%;
+  width:100%;
+  background-color:rgba(0,0,0,.3); 
+  p{
+    a{
+      display: block;
+      position:absolute;
+      top: -8px;
+      left: -8px;
+      font-size: .4rem;
+      text-decoration: none;
+      padding:10px;
+      //border-bottom:1px solid #fff;
+    }
+  }
+}
+.clock{
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    z-index: 100000;
+}
+.personalIntro{
+  position:absolute;
+  left:13%;
+  top: 18%;
+  transform:translateX(-50%);
+  z-index: 1000;
+
+  li{
+    list-style-type: none;
+    text-align: center;
+    &:first-child{
+      overflow: hidden;
+      display: inline-block;
+      //position: absolute;
+      height: 100px;
+      width: 100px;
+      border-radius:50%;
+      border:1px solid #fff;
+      
+      top: 39px;
+      left: 39px;
+    }
+    span{
+      color: #ccc;
+      font: .8rem arial;
+    }
+  }
+}
+
+.nicestatement{
+  position:absolute;
+  color: #fff;
+  font: .8rem arial;
+  top: 400px;
+  left:20px;
+  padding:20px;
+  border-radius:10px;
+  text-shadow: 8px 8px 10px rgba(0,0,0,0.7);
+  box-shadow: 8px 8px 10px rgba(0,0,0,0.7); 
+  animation: statement 3.6s;
+}
+
+.section2{
+  background-color: green;
+  background-image:url('../images/2.jpg');
+  .works{
+    $width:70%;
+    position:absolute;
+    height: 70%;
+    width: $width;
+    background-color:rgba(0,0,0,.4);
+    left: 50%;
+    margin-left:-$width/2;
+    top: 20%;
+    
+    .doubleline{
+      height: 30px;
+      line-height: 30px;
+      border-top:1px solid #fff;
+      border-bottom:1px solid #fff;
+      margin: 10px 0;
+      
+     }
+}
+}
+.worklist{
+        
+        li{
+        display: inline-block;
+        width: 130px;
+        height: 200px;
+        margin-left:40px;
+        margin-top:40px;
+        background-color:green;
+        border-radius:15px;
+        box-shadow:4px 4px 10px rgba(0,0,0,.7);
+        position:relative;  
+      
+        &:first-child{
+          background-image:url(../images/chuizi.jpg);
+        }
+        &:nth-child(2){
+          background-image:url(../images/heibai.jpg);
+          background-size:100px;
+        }
+        &:hover{
+          background:#b30000;
+          a{display:block;
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+          }
+        }
+        a{
+          display: none;
+          text-decoration: none;
+        }
+        }
+      }
+.doubleline p i{
+  display: block;
+  line-height: 30px;
+  color: #fff;
+  position:absolute;
+  font: 1.2rem arial italic;
+  font-style: italic;
+}      
+
+.section3{
+  background-color: blue;
+  background-image:url('../images/1.jpg');
+}
+
+.section4{
+  background-color: purple;
+  background-image:url('../images/blurimage.jpg');
+}
+
+.buttongroups{
+  //background-color:$buttongroupsbgcolor;
+  position: fixed;
+  height: $buttongroupsHeight;
+  width: $buttongroupsWidth;
+  right: 0;
+  top: 50%;
+  margin-top:-$buttongroupsHeight/2;
+  ul{list-style-type:none;
+    position:absolute;
+    right:$buttongroupsWidth/2-($btnwidth+2)/2;
+    z-index: 100;
+    text-align: center;
+    li{
+      height:$btnheight;
+      width: $btnwidth;
+      border:1px solid $btnbordercolor;
+      border-radius: $btnheight/2;
+      margin-bottom: $btnmargin;
+      text-align: center;
+      vertical-align: middle;
+      background-color:$btnbgcolor;
+      &:hover{
+        transform: scale(1.5,1.5);
+      }
+    }
+  }
+}
+.innercircle{
+  display: inline-block;
+  height:$btnheight*.4;
+  width: $btnwidth*.4;
+  margin-top:($btnheight*.6-2)/2;
+  border:1px solid $btnbordercolor;
+  border-radius: $btnheight*.4/2;
+}
+.verticalLine{
+  background-color:$verticalLinebgcolor;
+  position: absolute;
+  height: $verticalLineHeight;
+  width: $verticalLineWidth;
+  right: $buttongroupsWidth/2-$verticalLineWidth/2;
+  top: 50%;
+  margin-top:-$verticalLineHeight/2;
+  z-index: 10;
+}
+.active{
+  background-color:$activebgcolor;
+}
+.downarrow{
+  height: 100px;
+  width: 60px;
+  position:absolute;
+  left: 50%;
+  top: 78%;
+  animation:updown 3s linear infinite alternate;
+  ul{
+    list-style-type: none;
+    li{
+      height: 30px;
+      width:30px;
+      border-bottom: 1px solid #fff;
+      border-left: 1px solid #fff;
+      transform: rotate(-45deg);
+      transform-origin: center;
+      margin: 0 auto;
+      &:first-child{
+        animation:arrow 3.6s linear  infinite alternate; 
+      }
+      &:last-child{
+        animation:arrow 3.6s linear 1.8s infinite alternate;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px){
+  .nicestatement{
+    display: none;
+   }
+   .section{
+    height: 100%;
+   }
+   .doubleline p i {
+   font: .7rem arial italic;
+}
+   .personalIntro{
+    padding:30px 40px;
+    position:absolute;
+    left: 50%;
+    top: 20%;
+    transform:translate3d(-50%,-50%);
+    border:1px solid #ccc;
+    border-radius:10px;
+    box-shadow:4px 4px 4px rgba(0,0,0,.5);
+    box-shadow:-4px -4px 4px rgba(0,0,0,.5);
+   } 
+   .worklist{
+    li{
+    height: 60px;
+    width: 40px;
+    border-radius: 5px;
+    background:transparent;
+    a {
+      img{
+        height: 20px;
+        width: 20px;
+      }
+    }
+    }
+   }
+    .downarrow{
+      height: 80px;
+      width: 240px;
+      border-radius:10px;
+      background:blue;
+      position:absolute;
+      left: 50%;
+      top: 70%;
+      margin-left: -120px;
+      line-height: 80px;
+      text-align: center;
+      li{
+        display: none;
+      }
+      &:after{
+        display: inline-block;
+        content: "程序员的诗和远方";
+
+      }
+   }
+   .buttongroups{
+    display: none;
+   }
+   .header{
+    display: block;
+    height:80px;
+   }
+   .mask p a{
+    display: none;
+   }
+   .nav{
+    display: none;
+   }
+   .mask p{
+    position:absolute;
+    top: 20px;
+    width:140px;
+    height: 140px;
+    background-image:url('../images/threeline.png');
+    z-index: 10000;
+    background-size:80px 40px;
+    background-repeat:no-repeat;
+   }
+   
+  }

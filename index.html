@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>personalResume</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/iconfont.css">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable = no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen"/>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+</head>
+
+<body>
+<!-- 为了更好的体现该插件的价值，请在使用之间先搭建如下基本的html结构和下载css文件 -->
+    <div class="container" id="container" style="top:0">
+        <div class="section section1">
+        <div class="header">
+            <div class="nav">
+                   <ul>
+                       
+                       <li></li>
+                       <li></li>
+                       <li></li>
+                       
+                       <li><i class="iconfont icon-kongjian"></i></li>
+                       <li id="weixin"><i class="iconfont icon-weixin"></i></li>
+                   </ul>
+            </div>
+            <div class="doubcode">
+            <p>　加我微信</p><br>
+            <img src="images/weixin.jpg" width="100px" height="100px" ></div>   
+        </div>
+            
+            <div class="mask">
+                <p></p>
+                <blockquote class="nicestatement">
+                    var noteBook = function（myExperience）{<br/>
+                        　　 var funthing = [];<br/>
+                        　　　　for(var i=0;i< myExperience.length; i++){<br/>
+                          　　　　　　funting.push (myExperience[i]);<br/>
+                        　　　　}<br/>
+                        　　　　return funting.join("。");<br/>
+                    };<br/>
+                    noteBook(["2017的第一个小心愿"]);
+                </blockquote> 
+                <div class="personalIntro">
+                    <ul>
+                        <li><img src="images/ff.jpg" width="100px" height="100px"></li>
+                        
+                        <li><h3>崇尚自由，脚踏实际</h3></li>
+                        <hr/>
+                        <li><span>我叫王小峰</span></li>
+                        <li><span>25岁</span></li>
+                        <li><span>一枚小前端</span></li>
+                        <li><span>antartec@outlook.com</span></li>
+                    </ul>
+                </div>
+                <div class="downarrow">
+                     <ul>
+                         <li></li>
+                         <li></li>
+                     </ul>
+                 </div> 
+            </div>   
+        </div>
+	    <div class="section section2">
+             <div class="works">
+                    <div class="doubleline">
+                        <p><i>when things are bad,it's the best time to reinvent yourself</i></p>
+                    </div>
+                    <ul class="worklist">
+                        <li><a href="http://esofa.applinzi.com/czindex.html" target="_blank"><img src="images/anchor.png" width="40px"><br/>锤子手机</a></li>
+                        <li><a href="https://hongtanhao.github.io/blurImage/" target="_blank"><img src="images/anchor.png" width="40px"><br/>锤子手机</a></li>
+                        <li><a href="https://hongtanhao.github.io/ChuiziWebsite/" target="_blank"><img src="images/anchor.png" width="40px"><br/>锤子手机</a></li>
+                        <li><a href="https://hongtanhao.github.io/ChuiziWebsite/" target="_blank"><img src="images/anchor.png" width="40px"><br/>锤子手机</a></li>
+                        <li><a href="https://hongtanhao.github.io/ChuiziWebsite/" target="_blank"><img src="images/anchor.png" width="40px"><br/>锤子手机</a></li>
+                        
+                        
+                    </ul>
+                </div>   
+        </div>
+	    <div class="section section3">
+             <input type="file" name="pic">   
+        </div>
+	    <div class="section section4"></div>
+    </div>
+    <script type="text/javascript" src="http://scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/fullpage.js"></script>
+    <script type="text/javascript" src="scripts/touch.js"></script>
+    <script type="text/javascript">
+     var Fullpage = new Fullpage();
+
+    </script>
+    <script type="text/javascript">
+        $(function(){
+           $('.downarrow').on("click",function(){
+             var height = $('.container').height();
+             var length = $('.container .section').length;
+             var sectionheight = height/length;
+             $('.container').animate({
+                 top:-sectionheight
+             },400);
+
+             });
+           $('#weixin').hover(function(){
+               $('.doubcode').show();
+             },function(){
+               $('.doubcode').hide();
+             });
+           
+        });
+    </script>		
+</body>
+</html>
