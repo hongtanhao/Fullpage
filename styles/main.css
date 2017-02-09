@@ -74,7 +74,7 @@ html, body {
   position: relative; }
 
 .section1 {
-  background-color: red;
+  background-color: #ccc;
   background-image: url("../images/3.jpg"); }
 
 .nav {
